@@ -21,20 +21,20 @@ public class DiscountDecorator extends Decorator{
     
     @Override
     public double getPrice() {
-        double price = product.getPrice();
+        double price = super.getPrice();
         price = price*discount;
-        double price2 = product.getPrice()-price;
+        double price2 = super.getPrice()-price;
         return price2;
     }
 
     @Override
     public int getWeight() {
-        return product.getWeight();
+        return super.getWeight();
     }
 
     @Override
     public double getShippingCost() {
-        return product.getShippingCost();
+        return super.getShippingCost();
     }
 
 
