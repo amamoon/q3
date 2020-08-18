@@ -16,18 +16,18 @@ public class FreeShippingDecorator extends Decorator{
         
     @Override
     public double getPrice() {
-        return product.getPrice();
+        return super.getPrice();
     }
 
     @Override
     public int getWeight() {
-        return product.getWeight();
+        return super.getWeight();
     }
 
     @Override
     public double getShippingCost() {
         if(getPrice() > price && getWeight() < weight) return 0;
-        return product.getShippingCost();
+        return super.getShippingCost();
     }
 
     // TODO Complete this class
